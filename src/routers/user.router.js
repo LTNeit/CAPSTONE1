@@ -7,7 +7,8 @@ import { uploadMemoryStorage } from "../common/multer/memory-storage.multer.js";
 const userRouter = express.Router();
 
 userRouter.get("/", userController.findAll);
-userRouter.get("/:id", userController.findOne);
+
+userRouter.get("/profile", authCookie, userController.getInfo);
 
 userRouter.post(
   "/avatar-local",
@@ -27,12 +28,12 @@ userRouter.put("/profile", authCookie, userController.updateProfile);
 
 userRouter.post("/saved-images", authCookie, userController.saveImage);
 
+userRouter.get("/:id/saved-images", userController.getSavedImages);
+
 userRouter.delete(
   "/saved-images/:hinhId",
   authCookie,
   userController.deleteSavedImage,
 );
-
-userRouter.get("/:id/saved-images", userController.getSavedImages);
 
 export default userRouter;

@@ -58,11 +58,11 @@ export const userController = {
     }
   },
 
-  async findOne(req, res, next) {
+async getInfo(req, res, next) {
     try {
-      const result = await userService.findOne(req);
-      const response = responseSuccess(result, `Get user by id successfully`);
-      res.status(response.statusCode).json(response);
+      const result = await userService.getInfo(req);
+      const response = responseSuccess(result, `Lấy thông tin user thành công`);
+      res.status(200).json(response);
     } catch (error) {
       next(error);
     }

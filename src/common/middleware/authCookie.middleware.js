@@ -13,7 +13,7 @@ export const authCookie = async (req, res, next) => {
   const decode = verifyAccessToken(accessToken);
 
   // kiểm tra người dùng có trong db hay không
-  const userExits = await prisma.users.findUnique({
+  const userExits = await prisma.nguoi_dung.findFirst({
     where: {
       id: decode.userId,
     },

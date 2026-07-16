@@ -1,0 +1,45 @@
+{
+  "info": {
+    "_postman_id": "2357ea2b-bc04-45ea-a524-c39d8dd649c2",
+    "name": "Comment",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "45293203"
+  },
+  "item": [
+    {
+      "name": "New Comment",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "GetComment by Image",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"hinh_id\": 2,\r\n  \"content\": \"Ảnh này nét!!\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{URL}}/comment/create",
+          "host": [
+            "{{URL}}"
+          ],
+          "path": [
+            "comment",
+            "create"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

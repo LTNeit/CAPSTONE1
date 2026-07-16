@@ -1,0 +1,120 @@
+{
+  "info": {
+    "_postman_id": "cd4042e2-8fca-4733-8ced-b4a3323fbad0",
+    "name": "User",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "45293203"
+  },
+  "item": [
+    {
+      "name": "Profile",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{URL}}/user/profile",
+          "host": [
+            "{{URL}}"
+          ],
+          "path": [
+            "user",
+            "profile"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Profile",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"ho_ten\": \"Hồ Hoàng Tiến\",\r\n  \"tuoi\": 23,\r\n  \"email\": \"hohoangtien@gmail.com\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{URL}}/user/profile",
+          "host": [
+            "{{URL}}"
+          ],
+          "path": [
+            "user",
+            "profile"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Save Image",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"hinh_id\": 2\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{URL}}/user/saved-images",
+          "host": [
+            "{{URL}}"
+          ],
+          "path": [
+            "user",
+            "saved-images"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Save List",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{URL}}/user/5/saved-images",
+          "host": [
+            "{{URL}}"
+          ],
+          "path": [
+            "user",
+            "5",
+            "saved-images"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Unsave",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{URL}}/user/saved-images/1",
+          "host": [
+            "{{URL}}"
+          ],
+          "path": [
+            "user",
+            "saved-images",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
